@@ -22,8 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('Default_model');
 		$data = array(
-			'afko' => $this->Default_model->get_afko(),
-			//'mara' => $this->Default_model->get_mara(),
+			//'afko' => $this->Default_model->get_afko(),
+			'mara' => $this->Default_model->get_mara(),
 		);
 		/*$this->load->view('welcome_message');*/
 		$this->load->view('query_test',$data);
