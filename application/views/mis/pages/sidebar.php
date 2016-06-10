@@ -30,9 +30,9 @@
           <i class="fa fa-gear"></i> <span>Production</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="production_barungan.php"><i class="fa fa-circle-o"></i> Barungan</a></li>
-            <li><a href="production_lati.php"><i class="fa fa-circle-o"></i> Lati</a></li>
-            <li><a href="production_sambarata.php"><i class="fa fa-circle-o"></i> Sambarata</a></li>
+            <li><a href="<?php echo base_url(); ?>Pages/n/production_barungan"><i class="fa fa-circle-o"></i> Barungan</a></li>
+            <li><a href="<?php echo base_url(); ?>Pages/n/production_lati"><i class="fa fa-circle-o"></i> Lati</a></li>
+            <li><a href="<?php echo base_url(); ?>Pages/n/production_sambarata"><i class="fa fa-circle-o"></i> Sambarata</a></li>
           </ul>
         </li>
         <li>
