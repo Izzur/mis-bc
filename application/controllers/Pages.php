@@ -7,7 +7,7 @@ class Pages extends CI_Controller {
 		$this->load->view('mis/pages/dashboard');
 	}
 
-	public function n($pages) {
+	public function n($pages = 'dashboard') {
 		$this->load->view('mis/pages/'.$pages);
 	}
 

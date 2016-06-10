@@ -12,7 +12,7 @@ include('sidebar.php');
       <b>
         Production
       </b>
-      <small>Barungan Mine Operation</small>
+      <small>Binungan Mine Operation</small>
     </h1>
   </section>
 

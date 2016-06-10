@@ -19,7 +19,7 @@
         <li class="header">MAIN NAVIGATION</li>
 
         <li class="active">
-          <a href="index.php">
+          <a href="<?php echo base_url(); ?>Pages/n/dashboard">
             <i class="fa fa-th"></i> <span>Dashboard</span>
             <small class="label pull-right bg-green">new</small>
           </a>
@@ -30,18 +30,18 @@
           <i class="fa fa-gear"></i> <span>Production</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Pages/n/production_barungan"><i class="fa fa-circle-o"></i> Barungan</a></li>
+            <li><a href="<?php echo base_url(); ?>Pages/n/production_Binungan"><i class="fa fa-circle-o"></i> Binungan</a></li>
             <li><a href="<?php echo base_url(); ?>Pages/n/production_lati"><i class="fa fa-circle-o"></i> Lati</a></li>
             <li><a href="<?php echo base_url(); ?>Pages/n/production_sambarata"><i class="fa fa-circle-o"></i> Sambarata</a></li>
           </ul>
         </li>
         <li>
-          <a href="safety.php">
+          <a href="<?php echo base_url(); ?>Pages/n/safety">
             <i class="fa fa-plus-square"></i> <span>Safety</span>
           </a>
         </li>
         <li>
-          <a href="stockpile.php">
+          <a href="<?php echo base_url(); ?>Pages/n/stockpile">
             <i class="fa fa-industry"></i> <span>Stockpile</span>
           </a>
         </li>
