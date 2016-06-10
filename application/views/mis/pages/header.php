@@ -23,8 +23,9 @@
   <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>
-  
-
+  <!-- AdminLTE -->
+  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/app.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/demo.js"></script>
 
   <!-- CSS -->
   <!-- Latest compiled and minified CSS -->

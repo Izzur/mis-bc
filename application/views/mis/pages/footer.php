@@ -28,7 +28,7 @@
 <!-- FastClick -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script> -->
 <!-- AdminLTE App -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script> -->
 <!-- Sparkline -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script> -->
 <!-- jvectormap -->
@@ -39,9 +39,9 @@
 <!-- ChartJS 1.0.2 -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/pages/dashboard2.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/pages/dashboard2.js"></script> -->
 <!-- AdminLTE for demo purposes -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/demo.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/demo.js"></script> -->
 <!-- jQuery 2.2.0 -->
 <!-- <script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script> -->
 <!-- Bootstrap 3.3.6 -->
