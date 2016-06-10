@@ -6,31 +6,51 @@
   <title>Dashboard MIS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- jQuery 2.2.4 -->
+  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+  <!-- FastClick -->
+  <script src="<?php echo base_url(); ?>assets/plugin/fastclick/fastclick.js"></script>
+  <!-- Sparkline -->
+  <script src="<?php echo base_url(); ?>assets/plugin/sparkline/jquery.sparkline.min.js"></script>
+  <!-- jvectormap -->
+  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- slimscroll -->
+  <script src="<?php echo base_url(); ?>assets/plugin/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- ChartJS 1.0.2 -->
+  <script src="<?php echo base_url(); ?>assets/plugin/chartjs/Chart.min.js"></script>
   <!-- DataTables -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>
+  
+
+
+  <!-- CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/flat/blue.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/iCheck/flat/blue.css">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/morris/morris.css">
   <!-- jvectormap -->
-  <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/1.2.2/jquery-jvectormap.css" -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker for Bootstrap -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/datepicker/datepicker3.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/2.1.21/daterangepicker.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.wysihtml5/0.0.2/bootstrap-wysihtml5-0.0.2.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -48,8 +68,21 @@
   <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
 
+<script>
+  $(document).ready(function() {
+    $('#example1').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
+
+<div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
     <a href="<?php echo base_url(); ?>Pages/n/dashboard" class="logo">
