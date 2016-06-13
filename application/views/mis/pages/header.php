@@ -7,7 +7,8 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- jQuery 2.2.4 -->
-  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script> -->
   <!-- FastClick -->
   <script src="<?php echo base_url(); ?>assets/plugin/fastclick/fastclick.js"></script>
   <!-- Sparkline -->
