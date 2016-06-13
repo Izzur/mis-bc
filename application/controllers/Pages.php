@@ -8,7 +8,11 @@ class Pages extends CI_Controller {
 	}
 
 	public function n($pages = 'dashboard') {
-		$this->load->view('mis/pages/'.$pages);
+		$this->load->model('Chart_model');
+		$data = array(
+			'chart' => $this->Chart_model->get_country(),
+		);
+		$this->load->view('mis/pages/'.$pages,$data);
 	}
 
 }
