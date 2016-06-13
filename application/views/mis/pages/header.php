@@ -9,6 +9,8 @@
   <!-- jQuery 2.2.4 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script> -->
+  <!-- Bootstrap -->
+  <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
   <!-- FastClick -->
   <script src="<?php echo base_url(); ?>assets/plugin/fastclick/fastclick.js"></script>
   <!-- Sparkline -->
@@ -22,7 +24,6 @@
   <script src="<?php echo base_url(); ?>assets/plugin/chartjs/Chart.min.js"></script>
   <!-- DataTables -->
   <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>
   <!-- AdminLTE -->
   <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/app.min.js"></script>

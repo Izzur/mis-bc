@@ -18,16 +18,16 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
 
-        <li class="active">
+        <li>
           <a href="<?php echo base_url(); ?>Pages/n/dashboard">
             <i class="fa fa-th"></i> <span>Dashboard</span>
-            <small class="label pull-right bg-green">new</small>
+            <!-- <small class="label pull-right bg-green">new</small> -->
           </a>
         </li>
 
         <li>
           <a href="<?php echo base_url(); ?>Pages/n/production_binungan">
-          <i class="fa fa-gear"></i> <span>Production</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-gear"></i> <span>Production</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>Pages/n/production_binungan"><i class="fa fa-circle-o"></i> Binungan</a></li>
