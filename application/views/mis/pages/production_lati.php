@@ -31,48 +31,50 @@ var charts2 = <?php echo json_encode($chart); ?>;
 	<section class="content">
 		<!-- plant vs production -->
 		<div class="row">
-			<div class="box box-success">
-				<div class="box-header with-border">
-					<h3 class="box-title">Plan vs Production</h3>
-				</div>
-				<div class="box-body">
-					<!-- diagram -->
-					<div class="row">
-						<div class="col-md-9">
-							<div class="chart">
-								<canvas id="qwe" style="height:300px"></canvas>
-							</div>
-						</div>
+			<div class="col-md-12">
+				<div class="box box-success">
+					<div class="box-header with-border">
+						<h3 class="box-title">Plan vs Production</h3>
 					</div>
-					<div class="box-footer">
+					<div class="box-body">
+						<!-- diagram -->
 						<div class="row">
-							<div class="col-sm-4 col-xs-6">
-								<div class="description-block border-right">
-									<h5 class="description-header">$10,390.90</h5>
-									<span class="description-text">Actual Production</span>
+							<div class="col-md-9">
+								<div class="chart">
+									<canvas id="barChart" style="height:300px"></canvas>
 								</div>
-								<!-- /.description-block -->
-							</div>
-							<!-- /.col -->
-							<div class="col-sm-4 col-xs-6">
-								<div class="description-block border-right">
-									<h5 class="description-header">$24,813.53</h5>
-									<span class="description-text">Plan Production</span>
-								</div>
-								<!-- /.description-block -->
-							</div>
-							<!-- /.col -->
-							<div class="col-sm-4 col-xs-12">
-								<div class="description-block">
-									<h5 class="description-header">80%</h5>
-									<span class="description-text">Percentage Production</span>
-								</div>
-								<!-- /.description-block -->
 							</div>
 						</div>
-						<!-- /.row -->
+						<div class="box-footer">
+							<div class="row">
+								<div class="col-sm-4 col-xs-6">
+									<div class="description-block border-right">
+										<h5 class="description-header">$10,390.90</h5>
+										<span class="description-text">Actual Production</span>
+									</div>
+									<!-- /.description-block -->
+								</div>
+								<!-- /.col -->
+								<div class="col-sm-4 col-xs-6">
+									<div class="description-block border-right">
+										<h5 class="description-header">$24,813.53</h5>
+										<span class="description-text">Plan Production</span>
+									</div>
+									<!-- /.description-block -->
+								</div>
+								<!-- /.col -->
+								<div class="col-sm-4 col-xs-12">
+									<div class="description-block">
+										<h5 class="description-header">80%</h5>
+										<span class="description-text">Percentage Production</span>
+									</div>
+									<!-- /.description-block -->
+								</div>
+							</div>
+							<!-- /.row -->
+						</div>
+						<!-- box -->
 					</div>
-					<!-- box -->
 				</div>
 			</div>	
 		</div>
@@ -110,67 +112,72 @@ var charts2 = <?php echo json_encode($chart); ?>;
 		</div>
 
 		<!-- BAR CHART -->
-		<div class="box box-success">
-			<div class="box-header with-border">
-				<h3 class="box-title">Bar Chart</h3>
+		<div class="row">
+			<div class="col-md-8">
+				<div class="box box-success">
+					<div class="box-header with-border">
+						<h3 class="box-title">Bar Chart</h3>
 
-				<div class="box-tools pull-right">
-					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-					</button>
-					<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+							</button>
+							<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+						</div>
+					</div>
+					<div class="box-body">
+						<div class="chart">
+							<canvas id="barChart"></canvas>
+						</div>
+					</div>
+					<!-- /.box-body -->
 				</div>
+				<!-- /.box -->
 			</div>
-			<div class="box-body">
-				<div class="chart">
-					<canvas id="barChart" width="200" height="200"></canvas>
-					<script>
-					var ctx = $("#barChart");
-					var myChart = new Chart(ctx, {
-						type: 'bar',
-						data: {
-							labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-							datasets: [{
-								label: '# of Votes',
-								data: [12, 19, 3, 5, 2, 3],
-								backgroundColor: [
-								'rgba(255, 99, 132, 0.2)',
-								'rgba(54, 162, 235, 0.2)',
-								'rgba(255, 206, 86, 0.2)',
-								'rgba(75, 192, 192, 0.2)',
-								'rgba(153, 102, 255, 0.2)',
-								'rgba(255, 159, 64, 0.2)'
-								],
-								borderColor: [
-								'rgba(255,99,132,1)',
-								'rgba(54, 162, 235, 1)',
-								'rgba(255, 206, 86, 1)',
-								'rgba(75, 192, 192, 1)',
-								'rgba(153, 102, 255, 1)',
-								'rgba(255, 159, 64, 1)'
-								],
-								borderWidth: 1
-							}]
-						},
-						options: {
-							scales: {
-								yAxes: [{
-									ticks: {
-										beginAtZero:true
-									}
-								}]
-							}
-						}
-					});
-					</script>
-				</div>
-			</div>
-			<!-- /.box-body -->
 		</div>
-		<!-- /.box -->
 
 	</section>
 	<!-- /.content -->
 </div>
+
+<script>
+var ctx = $("#barChart");
+var myChart = new Chart(ctx, {
+	type: 'bar',
+	data: {
+		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+		datasets: [{
+			label: '# of Votes',
+			data: [12, 19, 3, 5, 2, 3],
+			backgroundColor: [
+			'rgba(255, 99, 132, 0.2)',
+			'rgba(54, 162, 235, 0.2)',
+			'rgba(255, 206, 86, 0.2)',
+			'rgba(75, 192, 192, 0.2)',
+			'rgba(153, 102, 255, 0.2)',
+			'rgba(255, 159, 64, 0.2)'
+			],
+			borderColor: [
+			'rgba(255,99,132,1)',
+			'rgba(54, 162, 235, 1)',
+			'rgba(255, 206, 86, 1)',
+			'rgba(75, 192, 192, 1)',
+			'rgba(153, 102, 255, 1)',
+			'rgba(255, 159, 64, 1)'
+			],
+			borderWidth: 5
+		}]
+	},
+	options: {
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero:true
+				}
+			}]
+		}
+	}
+});
+</script>
 
 <?php
 include('footer.php');
