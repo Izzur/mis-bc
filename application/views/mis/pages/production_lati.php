@@ -4,6 +4,7 @@ include('header.php');
 include('sidebar.php');
 ?>
 
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/production.css" />
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
@@ -38,42 +39,35 @@ var charts2 = <?php echo json_encode($chart); ?>;
 					</div>
 					<div class="box-body">
 						<!-- diagram -->
-						<div class="row">
+						<div class="row" style="display:flex">
 							<div class="col-md-9">
 								<div class="chart">
 									<canvas id="barChart" style="height:300px"></canvas>
 								</div>
 							</div>
-						</div>
-						<div class="box-footer">
-							<div class="row">
-								<div class="col-sm-4 col-xs-6">
-									<div class="description-block border-right">
-										<h5 class="description-header">$10,390.90</h5>
-										<span class="description-text">Actual Production</span>
-									</div>
-									<!-- /.description-block -->
-								</div>
-								<!-- /.col -->
-								<div class="col-sm-4 col-xs-6">
-									<div class="description-block border-right">
-										<h5 class="description-header">$24,813.53</h5>
+							<div class="col-md-3 col-sm-4" style="flex:1 1 auto">
+								<div class="pad box-pane-right bg-green" style="height:100%">
+									<div class="description-block" style="height:30%">
+										<i class="ion ion-ios-compose" style="font-size:-webkit-xxx-large"></i>
+										<h3 class="description-header">123,456,789.00</h3>
 										<span class="description-text">Plan Production</span>
 									</div>
 									<!-- /.description-block -->
-								</div>
-								<!-- /.col -->
-								<div class="col-sm-4 col-xs-12">
-									<div class="description-block">
-										<h5 class="description-header">80%</h5>
-										<span class="description-text">Percentage Production</span>
+									<div class="description-block" style="height:30%">
+										<i class="ion ion-ios-pulse-strong" style="font-size:-webkit-xxx-large"></i>
+										<h3 class="description-header">123,456,789.00</h3>
+										<span class="description-text">Actual Production</span>
+									</div>
+									<!-- /.description-block -->
+									<div class="description-block" style="height:30%">
+										<i class="ion ion-ios-pie" style="font-size:-webkit-xxx-large"></i>
+										<h3 class="description-header">100%</h3>
+										<span class="description-text">Percentage</span>
 									</div>
 									<!-- /.description-block -->
 								</div>
 							</div>
-							<!-- /.row -->
 						</div>
-						<!-- box -->
 					</div>
 				</div>
 			</div>	
@@ -144,25 +138,45 @@ var ctx = $("#barChart");
 var myChart = new Chart(ctx, {
 	type: 'bar',
 	data: {
-		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+		labels: ["Resource", "Resource", "Resource", "Resource", "Resource", "Resource"],
 		datasets: [{
-			label: '# of Votes',
+			label: 'Plan',
 			data: [12, 19, 3, 5, 2, 3],
 			backgroundColor: [
-			'rgba(255, 99, 132, 0.2)',
-			'rgba(54, 162, 235, 0.2)',
-			'rgba(255, 206, 86, 0.2)',
-			'rgba(75, 192, 192, 0.2)',
-			'rgba(153, 102, 255, 0.2)',
-			'rgba(255, 159, 64, 0.2)'
+			'rgba(128, 222, 234, 0.8)',
+			'rgba(128, 222, 234, 0.8)',
+			'rgba(128, 222, 234, 0.8)',
+			'rgba(128, 222, 234, 0.8)',
+			'rgba(128, 222, 234, 0.8)',
+			'rgba(128, 222, 234, 0.8)',
 			],
 			borderColor: [
-			'rgba(255,99,132,1)',
-			'rgba(54, 162, 235, 1)',
-			'rgba(255, 206, 86, 1)',
-			'rgba(75, 192, 192, 1)',
-			'rgba(153, 102, 255, 1)',
-			'rgba(255, 159, 64, 1)'
+			'rgba(0, 188, 212,0.8)',
+			'rgba(0, 188, 212,0.8)',
+			'rgba(0, 188, 212,0.8)',
+			'rgba(0, 188, 212,0.8)',
+			'rgba(0, 188, 212,0.8)',
+			'rgba(0, 188, 212,0.8)',
+			],
+			borderWidth: 5
+		},{
+			label: 'Production',
+			data: [13, 20, 4, 5, 3, 4],
+			backgroundColor: [
+			'rgba(0, 230, 118, 0.8)',
+			'rgba(0, 230, 118, 0.8)',
+			'rgba(0, 230, 118, 0.8)',
+			'rgba(0, 230, 118, 0.8)',
+			'rgba(0, 230, 118, 0.8)',
+			'rgba(0, 230, 118, 0.8)',
+			],
+			borderColor: [
+			'rgba(0, 200, 83,1)',
+			'rgba(0, 200, 83,1)',
+			'rgba(0, 200, 83,1)',
+			'rgba(0, 200, 83,1)',
+			'rgba(0, 200, 83,1)',
+			'rgba(0, 200, 83,1)',
 			],
 			borderWidth: 5
 		}]
