@@ -39,13 +39,13 @@ var charts2 = <?php echo json_encode($chart); ?>;
 					</div>
 					<div class="box-body">
 						<!-- diagram -->
-						<div class="row" style="display:flex">
+						<div id="container-main" class="row">
 							<div class="col-md-9">
 								<div class="chart">
 									<canvas id="barChart" style="height:300px"></canvas>
 								</div>
 							</div>
-							<div class="col-md-3 col-sm-4" style="flex:1 1 auto">
+							<div class="col-md-3 col-sm-4">
 								<div class="pad box-pane-right bg-green" style="height:100%">
 									<div class="description-block" style="height:30%">
 										<i class="ion ion-ios-compose" style="font-size:-webkit-xxx-large"></i>
