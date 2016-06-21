@@ -28,6 +28,8 @@
   <!-- AdminLTE -->
   <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/app.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/demo.js"></script>
+  <!-- AlaSQL -->
+  <script src="<?php echo base_url(); ?>assets/js/alasql.min.js"></script>
 
   <!-- CSS -->
   <!-- Latest compiled and minified CSS -->

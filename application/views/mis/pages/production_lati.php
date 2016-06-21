@@ -11,6 +11,10 @@ include('sidebar.php');
 <script type="text/javascript">
 var charts  = <?php echo json_encode($chart); ?>;
 var charts2 = <?php echo json_encode($chart); ?>;
+var actual = <?php echo json_encode($actual); ?>;
+actual.forEach(function(item, index){
+	item.TOTAL = (parseFloat(item.TOTAL)/1000);
+});
 </script>
 <script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/chart2.js"></script>
