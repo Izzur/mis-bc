@@ -15,12 +15,12 @@ $(function()
 		} temp.push([actual[i].MONTHS,actual[i].TOTAL]);
 	} drilldown.push(temp);
 	_pit.forEach(function(item, index){
-		var a = {'name':item.MAKTX.replace(/\wMO /g,''),'y':item.TOTAL,'drilldown':index};
+		var a = {'name':item.MAKTX.replace(/\wMO /g,''),'y':item.TOTAL,'drilldown':(index+1)};
 		act_pit.push(a);
-		act_pit_dd.push({'name':item.MAKTX.replace(/\wMO /g,''),'id':index,'data':drilldown[index]});
+		act_pit_dd.push({'name':item.MAKTX.replace(/\wMO /g,''),'id':(index+1),'data':drilldown[index]});
 	});
-	console.log(_pit);
-	console.log(JSON.stringify(act_pit_dd));
+	//console.log(_pit);
+	//console.log(JSON.stringify(act_pit_dd));
 
 	$('#container-chart').highcharts({
 		chart: { type: 'column' },
@@ -51,6 +51,11 @@ $(function()
 			data: act_pit
 		}],
 		drilldown: {
+			drillUpButton:{
+				position:{
+					x: 0, y:-50
+				}
+			},
 			series: act_pit_dd
 		}
 	});

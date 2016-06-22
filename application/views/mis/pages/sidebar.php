@@ -30,8 +30,8 @@
             <i class="fa fa-gear"></i> <span>Production</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Pages/n/production_binungan"><i class="fa fa-circle-o"></i> Binungan</a></li>
             <li><a href="<?php echo base_url(); ?>Pages/n/production_lati"><i class="fa fa-circle-o"></i> Lati</a></li>
+            <li><a href="<?php echo base_url(); ?>Pages/n/production_binungan"><i class="fa fa-circle-o"></i> Binungan</a></li>
             <li><a href="<?php echo base_url(); ?>Pages/n/production_sambarata"><i class="fa fa-circle-o"></i> Sambarata</a></li>
           </ul>
         </li>

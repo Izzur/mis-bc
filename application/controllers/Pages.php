@@ -13,11 +13,12 @@ class Pages extends CI_Controller {
 			case 'production_lati': $WERKS='B300'; break;
 			case 'production_binungan': $WERKS='B400'; break;
 			case 'production_sambarata': $WERKS='B500'; break;
-			default: $WERKS='%'; break;
+			default: $WERKS='X'; break;
 		}
 		$data = array(
 			'chart' => $this->Chart_model->get_country(),
-			'actual' => $this->Chart_model->get_actual_prod($WERKS)
+			'actual' => $this->Chart_model->get_actual_prod($WERKS),
+			'plan' => $this->Chart_model->get_plan_prod($WERKS)
 		);
 		$this->load->view('mis/pages/'.$pages,$data);
 	}
