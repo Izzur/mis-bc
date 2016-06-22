@@ -27,8 +27,11 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 			<small>Mine Operation</small>
 		</h1>
 		<ol class="breadcrumb">
-			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			<li class="active">Dashboard</li>
+			<div class="btn-group">
+			<button type="button" class="btn btn-success">Over Burden</button>
+			<button type="button" class="btn btn-success">Raw Coal</button>
+			</br>
+			</div>
 		</ol>
 	</section>
 
