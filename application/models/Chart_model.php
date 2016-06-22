@@ -20,5 +20,12 @@ class Chart_model extends CI_Model {
         return $query->result();
     }
 
+    function get_plan_prod($WERKS = '%') {
+        $this->db->select('TOTAL, AUFNR, GSTRP, MAKTX');
+        $this->db->like('plan_prod.WERKS',$WERKS,'after');
+        $query = $this->db->get('plan_prod');
+        return $query->result();
+    }
+
 }
 ?>

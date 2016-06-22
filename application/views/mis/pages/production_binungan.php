@@ -4,6 +4,14 @@ include('header.php');
 include('sidebar.php');
 ?>
 
+<script type="text/javascript">
+var charts  = <?php echo json_encode($chart); ?>;
+var charts2 = <?php echo json_encode($chart); ?>;
+var actual = <?php echo json_encode($actual); ?>;
+var plan = <?php echo json_encode($plan); ?>;
+
+</script>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
