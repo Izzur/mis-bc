@@ -11,3 +11,15 @@
 @media all and (min-width: 800px){
 	#container-main{flex-flow: row;}
 }
+.btn-radio{
+	background-color: #ffffff;
+}
+.btn-radio:active{
+	background-color: #fafafa;
+}
+.btn-radio:hover{
+	background-color: #000000;
+}
+.btn-radio:visited{
+	background-color: #085808;
+}

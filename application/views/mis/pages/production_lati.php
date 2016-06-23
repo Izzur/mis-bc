@@ -4,10 +4,11 @@ include('header.php');
 include('sidebar.php');
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/production.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/production.css" />
 <script src="<?php echo base_url(); ?>assets/js/highcharts/highcharts.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/data.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/drilldown.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/production.js"></script>
 <script type="text/javascript">
 var charts  = <?php echo json_encode($chart); ?>;
 var charts2 = <?php echo json_encode($chart); ?>;
@@ -27,10 +28,13 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 			<small>Mine Operation</small>
 		</h1>
 		<ol class="breadcrumb">
-			<div class="btn-group">
-			<button type="button" class="btn btn-success">Over Burden</button>
-			<button type="button" class="btn btn-success">Raw Coal</button>
-			</br>
+			<div class="btn-group" data-toggle="buttons">
+				<label class="btn btn-success active" id="option1">
+					<input type="radio" name="options" autocomplete="off" checked> Raw Coal
+				</label>
+				<label class="btn btn-success" id="option2">
+					<input type="radio" name="options" autocomplete="off"> Overburden
+				</label>
 			</div>
 		</ol>
 	</section>
@@ -145,7 +149,7 @@ var label = [];
 var data_plan = [];
 var data_act = [];
 var _act = alasql('SELECT MONTHS, ROUND(SUM(TOTAL),3) AS TOTAL FROM ? GROUP BY MONTHS ORDER BY MONTHS',[actual]);
-var _plan = alasql('SELECT MID(GSTRP,5,2) AS MONTHS,TOTAL AS TOTAL FROM ?',[plan]);
+var _plan = alasql('SELECT MID(GSTRP,5,2) AS MONTHS,TOTAL,MAKTX FROM ?',[plan]);
 _plan = alasql('SELECT MONTHS, ROUND(SUM(TOTAL),3) AS TOTAL FROM ? GROUP BY MONTHS ORDER BY MONTHS',[_plan]);
 _plan.forEach(function(item,index){label.push(item.MONTHS);data_plan.push(item.TOTAL);});
 data_plan.push(0);
@@ -153,51 +157,51 @@ label.push("12");
 _act.forEach(function(item,index){data_act.push(item.TOTAL);});data_act.push(1000);
 
 var ctx = $("#barChart");
+var chartData = {
+	labels: label,
+	datasets: [{
+		label: 'Plan (1000 MT)',
+		data: data_plan,
+		backgroundColor: 'rgba(128, 222, 234, 0.8)',
+		borderColor: 'rgba(0, 188, 212,0.8)',
+		borderWidth: 2
+	},{
+		label: 'Actual (1000 MT)',
+		data: data_act,
+		backgroundColor: 'rgba(0, 230, 118, 0.8)',
+		borderColor: 'rgba(0, 200, 83,1)',
+		borderWidth: 2
+	}]};
+var chartOption = {
+	scales: {
+		xAxes: [{
+			scaleLabel: {display:true,labelString:'Month'}
+		}],
+		yAxes: [{
+			scaleLabel: {display:true,labelString:'Total Amount'},
+			ticks: {
+				beginAtZero:true,
+				userCallback:
+				function(value,index,values){
+					return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				}
+			}
+		}]
+	}};
 var myChart = new Chart(ctx, {
 	type: 'bar',
-	data: {
-		labels: label,
-		datasets: [{
-			label: 'Plan (1000 MT)',
-			data: data_plan,
-			backgroundColor: 'rgba(128, 222, 234, 0.8)',
-			borderColor: 'rgba(0, 188, 212,0.8)',
-			borderWidth: 2
-		},{
-			label: 'Actual (1000 MT)',
-			data: data_act,
-			backgroundColor: 'rgba(0, 230, 118, 0.8)',
-			borderColor: 'rgba(0, 200, 83,1)',
-			borderWidth: 2
-		}]
-	},
-	options: {
-		scales: {
-			xAxes: [{
-				scaleLabel: {display:true,labelString:'Month'}
-			}],
-			yAxes: [{
-				scaleLabel: {display:true,labelString:'Total Amount'},
-				ticks: {
-					beginAtZero:true,
-					userCallback:
-					function(value,index,values){
-						return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-					}
-				}
-			}]
-		}
-	}
+	data: chartData,
+	options: chartOption
 });
 
 var total_plan=alasql("SELECT SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE 'Raw%'",[plan]);
 var total_act=alasql("SELECT SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE 'Raw%'",[actual]);
 document.getElementById('side-plan').innerHTML=
-	total_plan[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+total_plan[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 document.getElementById('side-act').innerHTML=
-	total_act[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+total_act[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 document.getElementById('side-prc').innerHTML=
-	((total_act[0].TOTAL/total_plan[0].TOTAL)*100).toFixed(2).toString()+"%";
+((total_act[0].TOTAL/total_plan[0].TOTAL)*100).toFixed(2).toString()+"%";
 </script>
 
 <?php

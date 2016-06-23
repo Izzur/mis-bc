@@ -38,12 +38,12 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ionicons.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/adminlte/css/skins/_all-skins.min.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/adminlte/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/adminlte/css/skins/_all-skins.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/iCheck/flat/blue.css">
   <!-- Morris chart -->
