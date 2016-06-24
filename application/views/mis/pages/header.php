@@ -6,31 +6,6 @@
   <title>Dashboard MIS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- jQuery 2.2.4 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script> -->
-  <!-- Bootstrap -->
-  <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
-  <!-- FastClick -->
-  <script src="<?php echo base_url(); ?>assets/plugin/fastclick/fastclick.js"></script>
-  <!-- Sparkline -->
-  <script src="<?php echo base_url(); ?>assets/plugin/sparkline/jquery.sparkline.min.js"></script>
-  <!-- jvectormap -->
-  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-  <!-- slimscroll -->
-  <script src="<?php echo base_url(); ?>assets/plugin/slimScroll/jquery.slimscroll.min.js"></script>
-  <!-- ChartJS 1.0.2 -->
-  <script src="<?php echo base_url(); ?>assets/plugin/chartjs/Chart.min.js"></script>
-  <!-- DataTables -->
-  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>
-  <!-- AdminLTE -->
-  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/app.min.js"></script>
-  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/demo.js"></script>
-  <!-- AlaSQL -->
-  <script src="<?php echo base_url(); ?>assets/js/alasql.min.js"></script>
-
   <!-- CSS -->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
@@ -57,6 +32,30 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 
+  <!-- jQuery 2.2.4 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script> -->
+  <!-- Bootstrap -->
+  <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="<?php echo base_url(); ?>assets/plugin/fastclick/fastclick.js"></script>
+  <!-- Sparkline -->
+  <script src="<?php echo base_url(); ?>assets/plugin/sparkline/jquery.sparkline.min.js"></script>
+  <!-- jvectormap -->
+  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+  <!-- slimscroll -->
+  <script src="<?php echo base_url(); ?>assets/plugin/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- ChartJS 1.0.2 -->
+  <script src="<?php echo base_url(); ?>assets/plugin/chartjs/Chart.min.js"></script>
+  <!-- DataTables -->
+  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/app.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugin/adminlte/js/demo.js"></script>
+  <!-- AlaSQL -->
+  <script src="<?php echo base_url(); ?>assets/js/alasql.min.js"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

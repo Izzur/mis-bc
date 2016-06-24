@@ -1,6 +1,6 @@
-$(function()
-{
-	var _pit = alasql('SELECT MAKTX,SUM(TOTAL) AS TOTAL FROM ? GROUP BY MAKTX',[actual]);
+function updateHC(arg) {
+	if (arguments.length==0) arg='%'; // TODO: Set default to Raw Coal (?)
+	var _pit = alasql("SELECT MAKTX,SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE '"+arg+"%' GROUP BY MAKTX",[actual]);
 	var act_pit = [];
 	var act_pit_dd = [];
 	var drilldown = [];
@@ -15,13 +15,10 @@ $(function()
 		} temp.push([actual[i].MONTHS,actual[i].TOTAL]);
 	} drilldown.push(temp);
 	_pit.forEach(function(item, index){
-		var a = {'name':item.MAKTX.replace(/\wMO /g,''),'y':item.TOTAL,'drilldown':(index+1)};
-		act_pit.push(a);
+		act_pit.push({'name':item.MAKTX.replace(/\wMO /g,''),'y':item.TOTAL,'drilldown':(index+1)});
 		act_pit_dd.push({'name':item.MAKTX.replace(/\wMO /g,''),'id':(index+1),'data':drilldown[index]});
 	});
-	//console.log(_pit);
-	//console.log(JSON.stringify(act_pit_dd));
-
+	
 	$('#container-chart').highcharts({
 		chart: { type: 'column' },
 		title: { text: 'Actual Production per Pit. In 1000 MT<br>January, 2015 to December, 2015' },
@@ -59,4 +56,8 @@ $(function()
 			series: act_pit_dd
 		}
 	});
+}
+
+$(document).ready(function(){
+	updateHC();
 });

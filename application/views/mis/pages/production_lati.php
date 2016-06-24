@@ -8,6 +8,8 @@ include('sidebar.php');
 <script src="<?php echo base_url(); ?>assets/js/highcharts/highcharts.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/data.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/drilldown.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/chart2.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/production.js"></script>
 <script type="text/javascript">
 var charts  = <?php echo json_encode($chart); ?>;
@@ -17,8 +19,6 @@ var plan = <?php echo json_encode($plan); ?>;
 actual.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 </script>
-<script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/chart2.js"></script>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -154,7 +154,7 @@ _plan = alasql('SELECT MONTHS, ROUND(SUM(TOTAL),3) AS TOTAL FROM ? GROUP BY MONT
 _plan.forEach(function(item,index){label.push(item.MONTHS);data_plan.push(item.TOTAL);});
 data_plan.push(0);
 label.push("12");
-_act.forEach(function(item,index){data_act.push(item.TOTAL);});data_act.push(1000);
+_act.forEach(function(item,index){data_act.push(item.TOTAL);});
 
 var ctx = $("#barChart");
 var chartData = {
@@ -202,6 +202,7 @@ document.getElementById('side-act').innerHTML=
 total_act[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 document.getElementById('side-prc').innerHTML=
 ((total_act[0].TOTAL/total_plan[0].TOTAL)*100).toFixed(2).toString()+"%";
+
 </script>
 
 <?php

@@ -13,8 +13,10 @@ class Chart_model extends CI_Model {
     	return $query->result();
     }
 
-    function get_actual_prod($WERKS = '%') {
+    function get_actual_prod($WERKS = '%') {        
+        $this->db->select('actual_prod.*, ob_rawcoal.MAKTX, kontraktor.KNAME');
         $this->db->join('ob_rawcoal','ob_rawcoal.MATNR=actual_prod.PLNBEZ');
+        $this->db->join('kontraktor','kontraktor.PLNBEZ=actual_prod.PLNBEZ');
         $this->db->like('actual_prod.WERKS',$WERKS,'after');
         $query = $this->db->get('actual_prod');
         return $query->result();
