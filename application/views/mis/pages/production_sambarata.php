@@ -78,7 +78,7 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 
 		<!-- production per pit -->
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-8">
 				<div class=box box-default>
 					<div class="box-header with-border">
 						<h3 class="box-title">Production per PIT</h3>
@@ -90,6 +90,12 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 					</div>
 				</div>
 			</div>
+			<div class="col-md-4">
+			<div class="box box-success">
+				<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+				</div>
+			</div>
+		</div>
 		</div>
 
 		<!-- production per Contractor -->
@@ -106,6 +112,12 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
 					</div>
 				</div>
 			</div>
+			<div class="col-md-4">
+			<div class="box box-success">
+				<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+				</div>
+			</div>
+		</div>
 		</div>
 
 		<!-- BAR CHART -->
