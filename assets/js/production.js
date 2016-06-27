@@ -3,11 +3,13 @@ $(document).ready(function(){
 		updatePage('Raw');
 		updateHC('Raw');
 		updateHC2('Raw');
+		updatePie('Raw');
 	});
 	$('#option2').click(function(){
 		updatePage('OB');
 		updateHC('OB');
 		updateHC2('OB');
+		updatePie('OB');
 	});
 	function updatePage(args) {
 		data_plan=[];data_act=[];
