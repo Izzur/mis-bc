@@ -101,7 +101,7 @@ include('sidebar.php');
 		</div>
 		<div class="col-md-4">
 			<div class="box box-success">
-				<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
+				<div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
 				</div>
 			</div>
 		</div>
