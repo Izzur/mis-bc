@@ -19,18 +19,6 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/adminlte/css/AdminLTE.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/iCheck/flat/blue.css">
-  <!-- Morris chart -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/morris/morris.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-1.2.2.css">
-  <!-- Date Picker for Bootstrap -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/datepicker/datepicker3.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/daterangepicker/daterangepicker-bs3.css">
-  <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/bootstrap-wysihtml5/bootstrap3-wysihtml5.css">
 
   <!-- jQuery 2.2.4 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
