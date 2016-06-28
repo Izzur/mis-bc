@@ -175,7 +175,7 @@ plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
     </h1>
     <ol class="breadcrumb">
       <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-success active" id="option1">
+        <label class="btn btn-success" id="option1">
           <input type="radio" name="options" autocomplete="off" checked> Raw Coal
         </label>
         <label class="btn btn-success" id="option2">
