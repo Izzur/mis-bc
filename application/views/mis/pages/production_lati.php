@@ -6,6 +6,7 @@ include('sidebar.php');
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/production.css" />
 <script src="<?php echo base_url(); ?>assets/js/highcharts/highcharts.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/highcharts/theme1.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/data.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/drilldown.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
