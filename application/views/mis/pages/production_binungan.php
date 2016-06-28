@@ -22,7 +22,7 @@ include('sidebar.php');
 <script src="<?php echo base_url(); ?>assets/js/chart3.js"></script>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper hidden">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1 class="fa fa-home">
@@ -149,6 +149,7 @@ include('sidebar.php');
     </div>
   </section>
 </div>
+
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/production.css" />
 <script src="<?php echo base_url(); ?>assets/js/highcharts/highcharts.js"></script>

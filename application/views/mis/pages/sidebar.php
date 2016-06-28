@@ -35,12 +35,12 @@
             <li><a href="<?php echo base_url(); ?>Pages/n/production_sambarata"><i class="fa fa-circle-o"></i> Sambarata</a></li>
           </ul>
         </li>
-        <li>
+        <li class="hidden">
           <a href="<?php echo base_url(); ?>Pages/n/safety">
             <i class="fa fa-plus-square"></i> <span>Safety</span>
           </a>
         </li>
-        <li>
+        <li class="hidden">
           <a href="<?php echo base_url(); ?>Pages/n/stockpile">
             <i class="fa fa-industry"></i> <span>Stockpile</span>
           </a>
