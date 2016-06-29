@@ -33,5 +33,5 @@ $(document).ready(function(){
 		$('#side-act').html(total_act[0].TOTAL.toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 		$('#side-prc').html(((total_act[0].TOTAL/total_plan[0].TOTAL)*100).toFixed(2).toString()+"%");
 		$('#container-chart').highcharts().series[0].setData([],true);
-	}
+	}/**/;$('text[y="395"]').html('beraucoalenergy.co.id');
 });

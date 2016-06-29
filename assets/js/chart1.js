@@ -1,6 +1,6 @@
 function updateHC(arg) {
 	if (arguments.length==0) arg='%'; // TODO: Set default to Raw Coal (?)
-	var _pit = alasql("SELECT MAKTX,SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE '"+arg+"%' GROUP BY MAKTX",[actual]);
+	var _pit = alasql("SELECT MAKTX,SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE '"+arg+"%' GROUP BY MAKTX ORDER BY MAKTX",[actual]);
 	var act_pit = [];
 	var act_pit_dd = [];
 	var drilldown = [];

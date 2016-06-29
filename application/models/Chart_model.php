@@ -18,6 +18,7 @@ class Chart_model extends CI_Model {
         $this->db->join('ob_rawcoal','ob_rawcoal.MATNR=actual_prod.PLNBEZ');
         $this->db->join('kontraktor','kontraktor.PLNBEZ=actual_prod.PLNBEZ');
         $this->db->like('actual_prod.WERKS',$WERKS,'after');
+        $this->db->order_by('MTART DESC, MAKTX ASC, MONTHS ASC');
         $query = $this->db->get('actual_prod');
         return $query->result();
     }
