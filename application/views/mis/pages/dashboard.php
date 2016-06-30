@@ -9,18 +9,17 @@ include('sidebar.php');
 <script src="<?php echo base_url(); ?>assets/js/highcharts/theme1.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/data.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/highcharts/modules/drilldown.js"></script>
-<!-- <script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
-  <script src="<?php echo base_url(); ?>assets/js/chart2.js"></script> -->
-  <script src="<?php echo base_url(); ?>assets/js/chart3.js"></script>
+  <!--script src="<?php echo base_url(); ?>assets/js/chart1.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/chart2.js"></script>
+  <script src="<?php echo base_url(); ?>assets/js/chart3.js"></script-->
   <script src="<?php echo base_url(); ?>assets/js/chart4.js"></script>
-  <script src="<?php echo base_url(); ?>assets/js/production.js"></script>
   <script type="text/javascript">
-    var charts  = <?php echo json_encode($chart); ?>;
-    var charts2 = <?php echo json_encode($chart); ?>;
-    var actual = <?php echo json_encode($actual); ?>;
-    var plan = <?php echo json_encode($plan); ?>;
-    actual.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
-    plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
+  var charts  = <?php echo json_encode($chart); ?>;
+  var charts2 = <?php echo json_encode($chart); ?>;
+  var actual = <?php echo json_encode($actual); ?>;
+  var plan = <?php echo json_encode($plan); ?>;
+  actual.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
+  plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
   </script>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -56,7 +55,7 @@ include('sidebar.php');
           </div>
         </div>  
       </div>
-            <div class="row">
+      <div class="row">
         <!-- /.col -->
         <div class="col-md-4">
           <!-- Widget: user widget style 1 -->
@@ -74,7 +73,7 @@ include('sidebar.php');
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
                     <h5 class="description-header">3,200</h5>
-                    <span class="description-text">KONTRAK</span>
+                    <span class="description-text">AVERAGE</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -110,7 +109,7 @@ include('sidebar.php');
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
                     <h5 class="description-header">3,200</h5>
-                    <span class="description-text">KONTRAK</span>
+                    <span class="description-text">AVERAGE</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -146,7 +145,7 @@ include('sidebar.php');
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
                     <h5 class="description-header">3,200</h5>
-                    <span class="description-text">KONTRAK</span>
+                    <span class="description-text">AVERAGE</span>
                   </div>
                   <!-- /.description-block -->
                 </div>

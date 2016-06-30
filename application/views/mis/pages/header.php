@@ -21,8 +21,8 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugin/adminlte/css/AdminLTE.min.css">
 
   <!-- jQuery 2.2.4 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+  <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
   <!-- FastClick -->
