@@ -24,14 +24,13 @@ class Pages extends CI_Controller {
 		$this->load->view('mis/pages/'.$pages,$data);
 	}
 
-	public function sr($pages = 'lati') {
-		switch ($pages) {
-			case 'lati': $WERKS='Lati'; break;
-			case 'binungan': $WERKS='Binungan'; break;
-			case 'sambarata': $WERKS='Sambarata'; break;
-			default: $WERKS='X'; break;
-		}
-		$data = array('site' => $WERKS, );
+	public function sr() {
+		$this->load->model('Chart_model');
+		$WERKS = '';
+		$data = array(
+			'site' => '',
+			'actual' => $this->Chart_model->get_actual_prod($WERKS),
+		);
 		$this->load->view('mis/pages/stripping_ratio',$data);
 	}
 

@@ -36,14 +36,9 @@
           </ul>
         </li>
         <li>
-          <a href="<?php echo base_url(); ?>Pages/sr/lati">
-            <i class="fa fa-gear"></i> <span>Stripping Ratio</span> <i class="fa fa-angle-left pull-right"></i>
+          <a href="<?php echo base_url(); ?>Pages/sr">
+            <i class="fa fa-pie-chart"></i> <span>Stripping Ratio</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Pages/sr/lati"><i class="fa fa-circle-o"></i> Lati</a></li>
-            <li><a href="<?php echo base_url(); ?>Pages/sr/binungan"><i class="fa fa-circle-o"></i> Binungan</a></li>
-            <li><a href="<?php echo base_url(); ?>Pages/sr/sambarata"><i class="fa fa-circle-o"></i> Sambarata</a></li>
-          </ul>
         </li>
         <li class="hidden">
           <a href="<?php echo base_url(); ?>Pages/n/stockpile">
