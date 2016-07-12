@@ -34,8 +34,8 @@
   <script src="<?php echo base_url(); ?>assets/plugin/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
   <!-- slimscroll -->
   <script src="<?php echo base_url(); ?>assets/plugin/slimScroll/jquery.slimscroll.min.js"></script>
-  <!-- ChartJS 1.0.2 -->
-  <script src="<?php echo base_url(); ?>assets/plugin/chartjs/Chart.min.js"></script>
+  <!-- ChartJS 2.1.6 -->
+  <script src="<?php echo base_url(); ?>assets/js/Chart.min.js"></script>
   <!-- DataTables -->
   <script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugin/datatables/datatables.min.js"></script>

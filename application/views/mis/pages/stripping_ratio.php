@@ -5,7 +5,8 @@ include('sidebar.php');
 <script type="text/javascript">
 var actual = <?php echo json_encode($actual); ?>;
 actual.forEach(function(item,index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
-console.log(alasql('SELECT WERKS FROM ?',[actual]));
+var ob = alasql("SELECT MONTHS,SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE 'OB%' GROUP BY MONTHS ORDER BY MONTHS",[actual]);
+var rc = alasql("SELECT MONTHS,SUM(TOTAL) AS TOTAL FROM ? WHERE MAKTX LIKE 'Raw%' GROUP BY MONTHS ORDER BY MONTHS",[actual]);
 </script>
 <script src="<?php echo base_url(); ?>assets/js/chartSR.js"></script>
 <!-- Content Wrapper. Contains page content -->
