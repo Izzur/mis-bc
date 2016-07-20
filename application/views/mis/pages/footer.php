@@ -1,7 +1,7 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Beta</b> Version
+      <b></b>
     </div>
     <p>Created By <b>MIS Departemen</b></p>
   </footer>

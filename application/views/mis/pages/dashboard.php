@@ -1,7 +1,7 @@
 
 <?php
-include('header.php');
-include('sidebar.php');
+include 'header.php';
+include 'sidebar.php';
 ?>
 
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/production.css" />
@@ -34,26 +34,28 @@ include('sidebar.php');
     <section class="content">
       <!-- plant vs production -->
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
           <div class="box box-success">
             <div class="box-body">
               <!-- diagram -->
               <div id="container-main" class="row">
-                <div class="col-md-8">
+                <div class="col-md-11">
                   <div class="chart">
                     <div id="linechart"></div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="chart">
-                    <div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto">
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+        <div class="col-md-4">
+          <div class="box box-success">
+            <div class="box-body">
+              <!-- side chart -->
+              
+            </div>
+          </div>
+        </div>
       </div>
       <div class="row">
         <!-- /.col -->
@@ -175,5 +177,5 @@ include('sidebar.php');
   </div>
 
   <?php
-  include('footer.php');
+  include 'footer.php';
   ?>
