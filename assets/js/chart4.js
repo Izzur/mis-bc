@@ -1,23 +1,42 @@
-$(function () {
-    $('#linechart').highcharts({
-        title: {text: 'Actual Production per Pit per Month', x: -20 /*center*/ },
-        subtitle: {text: '', x: -20 },
-        xAxis: {categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] },
-        yAxis: {
-            title: {text: 'TOTAL PRODUCTION (1000MT)'},
-            plotLines: [{value: 0, width: 1, color: '#808080'}]
-        },
-        tooltip: {valueSuffix: '°C'},
-        legend: {
-            layout: 'horizontal',
-            align: 'center',
-            verticalAlign: 'bottom',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Lati', data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6] }, {
-            name: 'Binungan', data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5] }, {
-            name: 'Sambarata', data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0] }, {
-            name: 'Average', data: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0] }]
+$(document).ready(function(){
+  function foobar(arr) {
+    var n = [];
+    arr.forEach(function(item,index){
+      n.push(item.X);
     });
+    return n;
+  }
+  function avg() {
+    var n = [];
+    for (var i = 0; i < lati.length; i++) {
+      n.push((lati[i]+binungan[i]+sambarata[i])/3);
+    }
+    return n;
+  }
+  var lati = foobar(alasql("SELECT SUM(TOTAL) AS X FROM ? WHERE MAKTX LIKE 'Raw%' AND WERKS='B300' GROUP BY MONTHS ORDER BY MONTHS",[actual]));
+  var binungan = foobar(alasql("SELECT SUM(TOTAL) AS X FROM ? WHERE MAKTX LIKE 'Raw%' AND WERKS='B400' GROUP BY MONTHS ORDER BY MONTHS",[actual]));
+  var sambarata = foobar(alasql("SELECT SUM(TOTAL) AS X FROM ? WHERE MAKTX LIKE 'Raw%' AND WERKS='B500' GROUP BY MONTHS ORDER BY MONTHS",[actual]));
+  var average = avg();
+  $('#linechart').highcharts({
+      title: {text: 'Actual Production per Pit per Month', x: -20 /*center*/ },
+      subtitle: {text: '', x: -20 },
+      xAxis: {categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] },
+      yAxis: {
+          title: {text: 'TOTAL PRODUCTION (1000MT)'},
+          plotLines: [{value: 0, width: 1, color: '#808080'}]
+      },
+      tooltip: {valueSuffix: '°C'},
+      legend: {
+          layout: 'horizontal',
+          align: 'center',
+          verticalAlign: 'bottom',
+          borderWidth: 0
+      },
+      series: [{
+          name: 'Lati', data: lati }, {
+          name: 'Binungan', data: binungan }, {
+          name: 'Sambarata', data: sambarata }, {
+          name: 'Average', data: average
+      }]
+  });
 });

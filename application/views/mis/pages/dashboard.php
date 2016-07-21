@@ -14,12 +14,9 @@ include 'sidebar.php';
   <script src="<?php echo base_url(); ?>assets/js/chart3.js"></script-->
   <script src="<?php echo base_url(); ?>assets/js/chart4.js"></script>
   <script type="text/javascript">
-  var charts  = <?php echo json_encode($chart); ?>;
-  var charts2 = <?php echo json_encode($chart); ?>;
   var actual = <?php echo json_encode($actual); ?>;
-  var plan = <?php echo json_encode($plan); ?>;
+  var plan = {};
   actual.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
-  plan.forEach(function(item, index){item.TOTAL=(parseFloat(item.TOTAL)/1000);});
   </script>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -52,7 +49,7 @@ include 'sidebar.php';
           <div class="box box-success">
             <div class="box-body">
               <!-- side chart -->
-              
+
             </div>
           </div>
         </div>
