@@ -6,7 +6,10 @@
   <title>Dashboard MIS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon">
+  <link rel="icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon">
   <!-- CSS -->
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/master.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
   <!-- Font Awesome -->

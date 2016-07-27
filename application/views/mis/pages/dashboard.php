@@ -31,12 +31,12 @@ include 'sidebar.php';
     <section class="content">
       <!-- plant vs production -->
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="box box-success">
             <div class="box-body">
               <!-- diagram -->
               <div id="container-main" class="row">
-                <div class="col-md-11">
+                <div class="col-md-12">
                   <div class="chart">
                     <div id="linechart"></div>
                   </div>
@@ -45,7 +45,7 @@ include 'sidebar.php';
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 hidden">
           <div class="box box-success">
             <div class="box-body">
               <!-- side chart -->
@@ -62,7 +62,7 @@ include 'sidebar.php';
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-green">
               <div class="widget-user-image">
-                <img class="img-circle" src="http://ecovata-montazh.ru/wp-content/uploads/2015/09/c82601c2d502767c58b78d6e2d01d49f.png" alt="User Avatar">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/home_ava_2.png" alt="User Avatar">
               </div>
               <h3 class="widget-user-username">Lati</h3>
               <h5 class="widget-user-desc">Mine Operation</h5>
@@ -71,16 +71,16 @@ include 'sidebar.php';
               <div class="row">
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">3,200,000 tonne/month</h5>
-                    <span class="description-text">AVERAGE</span>
+                    <h5 class="description-header" id="lmo-left">3,200,000 tonne/month</h5>
+                    <span class="description-text">LOWEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">13,000</h5>
-                    <span class="description-text">MATERIAL</span>
+                    <h5 class="description-header" id="lmo-right">13,000</h5>
+                    <span class="description-text">HIGHEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -98,7 +98,7 @@ include 'sidebar.php';
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-green">
               <div class="widget-user-image">
-                <img class="img-circle" src="http://ecovata-montazh.ru/wp-content/uploads/2015/09/c82601c2d502767c58b78d6e2d01d49f.png" alt="User Avatar">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/home_ava_2.png" alt="User Avatar">
               </div>
               <h3 class="widget-user-username">Binungan</h3>
               <h5 class="widget-user-desc">Mine Operation</h5>
@@ -107,16 +107,16 @@ include 'sidebar.php';
               <div class="row">
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">3,200,000 tonne/month</h5>
-                    <span class="description-text">AVERAGE</span>
+                    <h5 class="description-header" id="bmo-left">3,200,000 tonne/month</h5>
+                    <span class="description-text">LOWEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">13,000</h5>
-                    <span class="description-text">MATERIAL</span>
+                    <h5 class="description-header" id="bmo-right">13,000</h5>
+                    <span class="description-text">HIGHEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -134,7 +134,7 @@ include 'sidebar.php';
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-green">
               <div class="widget-user-image">
-                <img class="img-circle" src="http://ecovata-montazh.ru/wp-content/uploads/2015/09/c82601c2d502767c58b78d6e2d01d49f.png" alt="User Avatar">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/home_ava_2.png" alt="User Avatar">
               </div>
               <h3 class="widget-user-username">Sambarata</h3>
               <h5 class="widget-user-desc">Mine Operation</h5>
@@ -143,16 +143,16 @@ include 'sidebar.php';
               <div class="row">
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">3,200,000 tonne/month</h5>
-                    <span class="description-text">AVERAGE</span>
+                    <h5 class="description-header" id="smo-left">3,200,000 tonne/month</h5>
+                    <span class="description-text">LOWEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6 border-right">
                   <div class="description-block">
-                    <h5 class="description-header">13,000</h5>
-                    <span class="description-text">MATERIAL</span>
+                    <h5 class="description-header" id="smo-right">13,000</h5>
+                    <span class="description-text">HIGHEST</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
